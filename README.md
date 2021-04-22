@@ -13,7 +13,7 @@
 
 ## Sobre o Projeto
 
-Este projeto visa o cadastro e listagem de pontos turísticos do país
+Este projeto visa o cadastro e listagem de pontos turísticos do país, foi desenvolvido em Java com banco de dados Mysql, Front-end ReactJS 
 
 ## Começando
 

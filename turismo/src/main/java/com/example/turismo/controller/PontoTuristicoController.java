@@ -42,7 +42,7 @@ public class PontoTuristicoController {
 		return pontoTuristicoService.save(ponto);
 	}
 	
-	@GetMapping("/pontos/{filtro}")
+	@GetMapping("/pontos/nome/{filtro}")
 	public List<PontoTuristico> listarTodos(@PathVariable String filtro){
 		return pontoTuristicoService.findAllComFiltro(filtro);
 	}

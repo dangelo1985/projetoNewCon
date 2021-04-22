@@ -6,6 +6,7 @@ import FooterComponent from './components/FooterComponent';
 import AdicionarPontoComponent from './components/AdicionarPontoComponent';
 import BuscarPontosComponent from './components/BuscarPontosComponent';
 import ViewPontoComponent from './components/ViewPontoComponent';
+import ViewPontoFind from './components/ViewPontoFind';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/pontos" component={BuscarPontosComponent}></Route>
                 <Route path="/novo" component={AdicionarPontoComponent}></Route>
                 <Route path="/view/:id" component={ViewPontoComponent}></Route>
+                <Route path="/view-table/:nome" component={ViewPontoFind}></Route>
                 
               </Switch>
             </div>

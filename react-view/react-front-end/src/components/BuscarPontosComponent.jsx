@@ -9,17 +9,14 @@ class BuscarPontosComponent extends Component {
         
         this.state ={
                 busca: '',
-                pontos: []
+                pontos: [],
+                ponto:''
         }
         this.adicionarPonto = this.adicionarPonto.bind(this);
         this.buscar = this.buscar.bind(this);
         
    }
-   componentDidMount(){
-    PontoTuristicoService.getPontosSemfiltro().then((res)=>{
-        this.setState({pontos: res.data});
-    });
-  }
+
    buscar = () => {
        const buscarFiltro = {
            busca: this.state.busca
@@ -35,10 +32,10 @@ class BuscarPontosComponent extends Component {
     this.props.history.push('/novo');
     }
 
-    viewPonto(id){
-        this.props.history.push(`/view/${id}`)
-    }
-       
+  
+    viewPontoView(nome){
+        this.props.history.push(`/view-table/${nome}`)
+    }   
     
     render() {
        
@@ -56,9 +53,10 @@ class BuscarPontosComponent extends Component {
                         <Form.Group controlId="formBasicEmail">
                             
                             <Form.Control  placeholder="Digite ..." 
-                                onChange={e => this.setState({busca: e.target.value})} value={this.state.busca}/>
+                                onChange={e => this.setState({ponto: e.target.value})} value={this.state.ponto}/>
                             <Form.Text className="text-muted"></Form.Text>
-                            <button  onClick={this.buscar} className="btn btn-primary" type="submit">Buscar</button>
+                            
+                            <button onClick= {() => this.viewPontoView(this.state.ponto)} className="btn btn-info">Buscar</button>
                         </Form.Group>
                 </Form>
                                     

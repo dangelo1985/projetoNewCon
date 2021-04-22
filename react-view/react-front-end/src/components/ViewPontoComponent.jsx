@@ -11,6 +11,7 @@ class ViewPontoComponent extends Component {
         }
     }
     componentDidMount(){
+
         PontoTuristicoService.getPontosID(this.state.id).then( res =>{
             this.setState({ponto: res.data})
         })
